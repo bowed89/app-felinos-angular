@@ -1,0 +1,54 @@
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"><img src="../../../assets/images/Logo_DazaSoftware.png" class="img-responsive" width="300" height="100"></th>
+      <th scope="col"> <p class="h2">El Buscador Felino</p> </th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Raza Felina:</th>
+      <td>
+          <select class="form-select form-select-sm" [(ngModel)]="felinoSeleccion" (ngModelChange)="onFelinoSelecccion($event)">
+            <option *ngFor="let felino of  felinos" [value]="felino.name">
+              {{ felino.name }}
+            </option>
+          </select>
+      </td> 
+      <td rowspan="8"> 
+        <img *ngIf="imageUrl" src="{{imageUrl}}" class="img-responsive" width="250" height="280"> 
+        <img *ngIf="!imageUrl"  class="img-responsive">
+      </td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">Id:</th>
+      <td>{{unitario.id}}</td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">Nombre:</th>
+      <td *ngIf="unitario">{{unitario.name}}</td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">Descripción:</th>
+      <td>{{unitario.description}}</td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">Años de Vida:</th>
+      <td>{{unitario.life_span}}</td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">Origen:</th>
+      <td>{{unitario.origin}}</td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">Wiki:</th>
+      <td>{{unitario.wikipedia_url}}</td>
+    </tr>
+    <tr *ngFor="let unitario of felinoUnitario">
+      <th scope="row">VetStreet:</th>
+      <td>{{unitario.vetstreet_url}}</td>
+    </tr>
+  </tbody>
+</table>

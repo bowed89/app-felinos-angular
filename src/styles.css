@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.active {
+    background-color:#ebf0f1;
+    font-weight: 620;
+  }
+
+.colorNavbar2 {
+  background-color: rgb(25, 192, 136);
+}

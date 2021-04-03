@@ -1,0 +1,35 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col"><img src="../../../assets/images/Logo_DazaSoftware.png" class="img-responsive" width="300" height="100"></th>
+        <th scope="col"> <p class="h2">18 Fotos Felinas</p> </th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="text-align: center;">
+        <td colspan="3">
+            <img *ngIf="cont === 0" src="{{ image }}"  class="img-responsive" width="250" height="280">
+            <img *ngIf="cont !== 0" src="{{ next }}"  class="img-responsive" width="250" height="280">
+        </td>
+      </tr>
+      <tr style="text-align: center;">
+        <td colspan="3">
+            <img (click)="primero()" src="../../../assets/images/primero.jpg" width="50" height="50"  class="img-responsive">
+            <img (click)="anterior()" src="../../../assets/images/anterior.jpg" width="50" height="50"  class="img-responsive">
+            <img (click)="siguiente()" src="../../../assets/images/siguiente.jpg" width="50" height="50"  class="img-responsive">
+            <img (click)="ultimo()" src="../../../assets/images/ultimo.jpg" width="50" height="50"  class="img-responsive">
+        </td>
+      </tr>
+      <tr style="text-align: center;">
+        <td colspan="3">
+            <button (click)="aleatorio()" type="button" class="btn btn-info" style="color: azure; font-family: Arial, Helvetica, sans-serif;">Nuevas Fotos</button>
+        </td>
+      </tr>
+      <tr style="text-align: center;">
+        <td colspan="3">
+           {{cont}}
+        </td>
+      </tr>
+    </tbody>
+</table>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "felinos-app"
+    }
+  },
+  "defaultProject": "felinos-app",
+  "cli": {
+    "analytics": false
+  }
 }
